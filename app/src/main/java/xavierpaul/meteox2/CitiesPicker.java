@@ -23,6 +23,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -98,6 +100,14 @@ public class CitiesPicker extends Activity {
                     if (v_newCity.get_country().equals("FRA"))
                         result.add(v_newCity);
                 }
+
+                //on trie par ordre alphabétique
+                Collections.sort(result, new Comparator<City>() {
+                    @Override
+                    public int compare(City s1, City s2) {
+                        return s1.toString().compareToIgnoreCase(s2.toString());
+                    }
+                });
 
                 return result;
             } catch (Throwable t) {

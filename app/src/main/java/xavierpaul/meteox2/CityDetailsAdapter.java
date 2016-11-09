@@ -79,8 +79,9 @@ public class CityDetailsAdapter extends ArrayAdapter<CityDetails> {
 
         try {
             ImageView v_imageIcon = (ImageView) v.findViewById(R.id.m_icon);
-            if (v_imageIcon != null && c.get_value().contains(".png")) {
+            if (v_imageIcon != null && c.get_value().contains(".png") && c.get_value().length() < 250) {
                 v_imageIcon.setVisibility(View.VISIBLE);
+                v_valueText.setVisibility(View.INVISIBLE);
                 new BitmapHelper(v_imageIcon).execute(c.get_value());
             }
         }

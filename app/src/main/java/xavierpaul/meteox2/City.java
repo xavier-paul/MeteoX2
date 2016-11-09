@@ -39,6 +39,11 @@ public class City implements Serializable {
 		this.m_position = p_position;
 	}
 
+	@Override
+	public String toString() {
+		return this.m_name;
+	}
+
 
 	public  String get_name() {
 		return m_name;
