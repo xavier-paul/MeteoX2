@@ -70,8 +70,11 @@ public class CityDetailsAdapter extends ArrayAdapter<CityDetails> {
 
         CityDetails c = m_itemList.get(position);
         TextView v_keyText = (TextView) v.findViewById(R.id.keyName);
-        if (v_keyText != null)
+        if (v_keyText != null) {
+            if (c.get_key().equalsIgnoreCase("hourly_data"))
+                return v;
             v_keyText.setText(c.get_key());
+        }
 
 		TextView v_valueText = (TextView) v.findViewById(R.id.valueName);
         if (v_valueText != null)
