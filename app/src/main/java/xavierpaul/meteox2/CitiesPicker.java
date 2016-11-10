@@ -60,9 +60,11 @@ public class CitiesPicker extends Activity {
     public void CityClicked(View view) {
         String v_url = (String) view.getTag();
         Intent intent = new Intent(this, WeatherByCity.class);
-        //JSONObject Jobject = GetJSONFromURL("http://www.prevision-meteo.ch/services/json/" + v_url);
+
+        Intent v_newTabbedActivity = new Intent(this, WeatherDetailsByCity.class);
+
         intent.putExtra(EXTRA_MESSAGE, v_url);
-        startActivity(intent);
+        startActivity(/*intent*/v_newTabbedActivity);
     }
 
 

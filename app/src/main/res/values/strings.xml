@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">MeteoX2</string>
-    <string name="title_activity_weather_by_city">WeatherByCity</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">Weather by Xavier</string>
+    <string name="title_activity_weather_by_city">Weather By City</string>
+    <string name="tab1_title">Today Weather</string>
+    <string name="tab2_title">Tomorrow Weather</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_weather_details_by_city">Weather Details By City</string>
 </resources>

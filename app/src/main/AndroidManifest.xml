@@ -25,6 +25,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="xavierpaul.meteox2.CitiesPicker" />
         </activity>
+        <activity
+            android:name=".WeatherDetailsByCity"
+            android:label="@string/title_activity_weather_details_by_city"
+            android:parentActivityName=".CitiesPicker">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="xavierpaul.meteox2.CitiesPicker" />
+        </activity>
     </application>
 
 </manifest>
